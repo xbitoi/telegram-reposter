@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------------
+# Telegram Reposter - runtime dependencies
+# Install with:  pip install -r requirements.txt
+# Pinned to the versions verified on this machine (Python 3.11).
+# ---------------------------------------------------------------------------
+
+# Web API + static frontend hosting
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29,<1.0
+
+# Telegram MTProto client (user account + bot)
+telethon>=1.36,<2.0
+
+# Async SQLite driver for the analytics database
+aiosqlite>=0.20,<1.0
+
+# Only used to migrate a legacy config.yaml; safe to remove if you never had one
+PyYAML>=6.0,<7.0
+
+# Optional: the built-in .env reader does not need it, kept for compatibility
+python-dotenv>=1.0,<2.0

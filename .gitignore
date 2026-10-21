@@ -1,0 +1,48 @@
+# --- Secrets & credentials ---
+backend/.env
+.env
+*.env
+!*.env.example
+
+# --- Telethon session files (contain auth keys) ---
+*.session
+*.session-journal
+*.session-wal
+*.session-shm
+
+# --- Databases / runtime data ---
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+data/
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node / build ---
+node_modules/
+dist/
+build/
+*.tgz
+
+# --- Legacy / editors / OS ---
+backend/config.yaml.legacy
+config.yaml
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

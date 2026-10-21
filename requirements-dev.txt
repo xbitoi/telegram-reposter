@@ -1,0 +1,10 @@
+# ---------------------------------------------------------------------------
+# Telegram Reposter - development / verification dependencies
+# Install with:  pip install -r requirements-dev.txt
+# Not needed to run the reposter itself.
+# ---------------------------------------------------------------------------
+
+-r requirements.txt
+
+# Headless browser used for the UI verification scripts
+playwright>=1.40,<2.0
