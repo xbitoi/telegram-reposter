@@ -1,7 +1,7 @@
 # Telegram Reposter Dashboard
 
 A self-hosted, bilingual (English / العربية) dashboard that mirrors posts from
-one or more Telegram source channels into a destination channel, with live
+a Telegram source channel into a destination channel, with live
 analytics, latency charts, error tracking and an optional dashboard password
 gate.
 
@@ -30,12 +30,21 @@ needs to be a member of the source channel.
 
 ## Requirements
 
-- Python 3.11+
-- A Telegram API id/hash from <https://my.telegram.org>
-- A bot token from [@BotFather](https://t.me/BotFather), added as an admin in
-  the destination channel
-- A Telegram user session signed in once (phone + code) so the user client can
-  read the source channels
+- **Windows 11** - this build is tested on Windows 11 only. Other operating
+  systems are untested (it is plain Python 3.11+, so it may run elsewhere, but
+  nobody has verified it).
+- A Telegram API id/hash from <https://my.telegram.org>. The dashboard ships
+  with a built-in step-by-step guide that walks you through creating them.
+- A bot token from [@BotFather](https://t.me/BotFather). The bot must already
+  be a member of the destination channel (added as an admin) before it can
+  post there.
+- A Telegram user account that **is already a member of the source channel**.
+  The user client signs in once (phone + code) and listens there, so the bot
+  never has to join the source.
+
+## Basic build
+
+This build is limited to **1 source channel and 1 destination channel**.
 
 ## Installation
 
