@@ -63,7 +63,16 @@ All settings live in `backend/.env` (copy `backend/.env.example` to start):
 | `TELEGRAM_SOURCE_CHANNEL` | Source channel(s) to listen on |
 | `TELEGRAM_DESTINATION_CHANNEL` | Destination channel |
 | `REPOST_MODE` | Fixed to `copy` |
-| `DELAY_*`, `RETRY_*` | Optional posting delay and retry policy |
+| `DELAY_ENABLED` | Delay between reposts (ships as `true`) |
+| `DELAY_MIN_SECONDS` / `DELAY_MAX_SECONDS` | Delay window in seconds (ships as `10` / `10`) |
+| `RETRY_*` | Retry policy for failed posts |
+
+## Repost delay
+
+This build ships with a **fixed 10-second delay** before every repost
+(`DELAY_ENABLED=true`, `DELAY_MIN_SECONDS=10`, `DELAY_MAX_SECONDS=10`), so a
+busy source channel is mirrored at a calm pace instead of a burst. The values
+can be edited in `backend/.env` before starting the app.
 
 ## Running
 

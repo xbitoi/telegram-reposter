@@ -37,10 +37,11 @@ DEFAULT_CONFIG: Dict[str, Any] = {
     "source_channels": [],
     "destination_channel": "",
     "repost_mode": "copy",  # always "copy" (forward is not supported)
+    # Basic build: a fixed 10-second pause before every repost.
     "delay_settings": {
-        "enabled": False,
-        "min_seconds": 0,
-        "max_seconds": 0,
+        "enabled": True,
+        "min_seconds": 10,
+        "max_seconds": 10,
     },
     "retry": {
         "max_attempts": 3,
